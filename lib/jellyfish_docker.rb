@@ -1,5 +1,5 @@
 require 'bcrypt'
-require "jellyfish_docker/engine"
+require 'jellyfish_docker/engine'
 
 module JellyfishDocker
   def self.initialize
