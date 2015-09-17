@@ -23,7 +23,10 @@ class RegisteredProvider < ActiveRecord::Base
     end
 
     def questions
-      [{ name: :docker_host, value_type: :password, field: :text, label: 'Docker Host URL', required: :if_new }]
+      [{ name: :docker_host, value_type: :string, field: :text, label: 'Docker Host URL', required: :if_new },
+       { name: :username, value_type: :string, field: :text, label: 'Docker Username', required: :if_new },
+       { name: :password, value_type: :password, field: :password, label: 'Docker Password', required: :if_new }
+      ]
     end
   end
 end
