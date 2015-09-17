@@ -17,7 +17,7 @@ class ProductType < ActiveRecord::Base
     end
 
     def tags
-      ['docker', 'server']
+      %w(docker server)
     end
 
     def product_questions
@@ -27,7 +27,7 @@ class ProductType < ActiveRecord::Base
     end
 
     def order_questions
-      [ ]
+      []
     end
 
     def service_class

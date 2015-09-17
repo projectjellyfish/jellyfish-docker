@@ -19,7 +19,7 @@ module JellyfishDocker
       app.middleware.insert_before(::ActionDispatch::Static, ::ActionDispatch::Static, "#{root}/public")
     end
 
-    initializer 'jellyfish_docker.load_default_settings', :before => :load_config_initializers do
+    initializer 'jellyfish_docker.load_default_settings', before: :load_config_initializers do
       begin
         if Setting.table_exists?
           Dir[File.expand_path '../../../app/models/setting/*.rb', __FILE__].each do |file|
@@ -27,12 +27,12 @@ module JellyfishDocker
           end
         end
       rescue
-        #ignored
+        # ignored
         nil
       end
     end
 
-    initializer 'jellyfish_docker.load_product_types', :before => :load_config_initializers do
+    initializer 'jellyfish_docker.load_product_types', before: :load_config_initializers do
       begin
         if ProductType.table_exists?
           Dir[File.expand_path '../../../app/models/product_type/*.rb', __FILE__].each do |file|
@@ -40,12 +40,12 @@ module JellyfishDocker
           end
         end
       rescue
-        #ignored
+        # ignored
         nil
       end
     end
 
-    initializer 'jellyfish_docker.load_registered_providers', :before => :load_config_initializers do
+    initializer 'jellyfish_docker.load_registered_providers', before: :load_config_initializers do
       begin
         if RegisteredProvider.table_exists?
           Dir[File.expand_path '../../../app/models/registered_provider/*', __FILE__].each do |file|
@@ -53,12 +53,12 @@ module JellyfishDocker
           end
         end
       rescue
-        #ignored
+        # ignored
         nil
       end
     end
 
-    initializer 'jellyfish_docker.register_extension', :after => :finisher_hook do |app|
+    initializer 'jellyfish_docker.register_extension', after: :finisher_hook do |_app|
       Jellyfish::Extension.register 'jellyfish-docker' do
         requires_jellyfish '>= 4.0.0'
 

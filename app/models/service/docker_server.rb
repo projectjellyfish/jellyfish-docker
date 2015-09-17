@@ -13,15 +13,12 @@ class Service < ActiveRecord::Base
     end
 
     def start
-
     end
 
     def stop
-
     end
 
     def terminate
-
     end
 
     private

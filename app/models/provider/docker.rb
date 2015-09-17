@@ -4,6 +4,7 @@ class Provider < ActiveRecord::Base
       def initialize
         true
       end
+
       def settings
         {}
       end
