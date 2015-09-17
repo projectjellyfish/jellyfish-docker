@@ -23,7 +23,7 @@ class RegisteredProvider < ActiveRecord::Base
     end
 
     def questions
-      [{ name: :docker_server, value_type: :password, field: :text, label: 'Docker Server URL', required: :if_new }]
+      [{ name: :docker_host, value_type: :password, field: :text, label: 'Docker Host URL', required: :if_new }]
     end
   end
 end
