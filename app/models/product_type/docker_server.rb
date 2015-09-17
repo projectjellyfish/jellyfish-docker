@@ -22,7 +22,7 @@ class ProductType < ActiveRecord::Base
 
     def product_questions
       [
-        { name: :dockerfile_url, value_type: :string, field: :text, label: 'Dockerfile URL', required: true }
+        { name: :repo_url, value_type: :string, field: :text, label: 'Repository URL', required: true }
       ]
     end
 
