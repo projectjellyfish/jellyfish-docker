@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Jellyfish Docker Module'
   s.description = 'Adds Docker provider and product types to Jellyfish API'
   s.license     = 'APACHE'
-  s.files       = Dir['{app,config,db,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
+  s.files       = Dir['{app,config,db,lib,public}/**/*', 'LICENSE', 'Rakefile', 'README.md']
   s.test_files  = Dir['spec/**/*']
   s.add_dependency 'rails', '~> 4.2'
   s.add_dependency 'bcrypt', '~> 3.1'

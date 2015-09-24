@@ -62,9 +62,6 @@ module JellyfishDocker
       Jellyfish::Extension.register 'jellyfish-docker' do
         requires_jellyfish '>= 4.0.0'
 
-        load_scripts 'extensions/docker/components/forms/fields.config.js',
-                     'extensions/docker/resources/aws-data.factory.js'
-
         mount_extension JellyfishDocker::Engine, at: :docker
       end
     end
