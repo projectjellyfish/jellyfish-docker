@@ -17,7 +17,7 @@ class ProductType < ActiveRecord::Base
     end
 
     def tags
-      %w(docker server)
+      %w(server)
     end
 
     def product_questions
